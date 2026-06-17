@@ -1,8 +1,8 @@
 -- Size: 0+ | Color channels (R/G/B): 0.0–1.0 | Alpha: 0.0 (transparent) – 1.0 (opaque)
 local OUTLINE_SIZE  = 2
-local OUTLINE_RED   = 0.0
-local OUTLINE_GREEN = 0.0
-local OUTLINE_BLUE  = 0.0
+local OUTLINE_RED   = 0.004
+local OUTLINE_GREEN = 0.004
+local OUTLINE_BLUE  = 0.004
 local OUTLINE_ALPHA = 1.0
 
 local function ApplyOutline(tb)
