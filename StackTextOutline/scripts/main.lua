@@ -16,20 +16,24 @@ local function ApplyOutline(tb)
     tb.Font = font
 end
 
+local function ShouldApply(tb)
+    local name = tb:GetFullName()
+    return name:find("AmountText")
+        and not name:find("BP_RepairCost")
+        and not name:find("PrimarySlot")
+        and not name:find("SecondarySlot")
+end
+
 -- Intercept every TextBlock the engine creates, globally
 NotifyOnNewObject("/Script/UMG.TextBlock", function(tb)
-    if tb:GetFullName():find("AmountText") then
-        ApplyOutline(tb)
-    end
+    if ShouldApply(tb) then ApplyOutline(tb) end
 end)
 
 -- Apply to any AmountText TextBlocks already loaded
 local existing = FindAllOf("TextBlock")
 if existing then
     for _, tb in pairs(existing) do
-        if tb:IsValid() and tb:GetFullName():find("AmountText") then
-            ApplyOutline(tb)
-        end
+        if tb:IsValid() and ShouldApply(tb) then ApplyOutline(tb) end
     end
 end
 
