@@ -7,6 +7,8 @@ A small UE4SS mod that adds an outline to item stack numbers to improve visibili
 ![Lua](https://img.shields.io/badge/Lua-2C2D72?logo=lua&logoColor=white)
 ![UE4SS](https://img.shields.io/badge/UE4SS-mod-4c4c54)
 
+Also available on [Nexus Mods](https://www.nexusmods.com/misery/mods/32).
+
 </div>
 
 ---
